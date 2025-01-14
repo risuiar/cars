@@ -3,11 +3,6 @@ import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 
 const animatedComponents = makeAnimated();
-const colourOptions = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
-];
 
 export default function SearchBox({
     title,
@@ -25,9 +20,9 @@ export default function SearchBox({
         <Select
             closeMenuOnSelect={false}
             components={animatedComponents}
-            defaultValue={[colourOptions[4], colourOptions[5]]}
             isMulti
-            options={options.map(option => ({ value: option.name, label: option.name }))}
+            options={options.map(option => ({ value: option.id, label: option.name }))}
+            onChange={onChange}
         />
     </>
   );

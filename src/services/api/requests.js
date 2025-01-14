@@ -1,8 +1,8 @@
-const base = "https://dash.emilfrey.ch/api/v1"
+const base = "https://dash.emilfrey.ch/api/v1/de"
 
 const requests = {
-    criteria: `${base}/de/search-criteria`,
-    list: `${base}/cars`,
+    criteria: `${base}/search-criteria`,
+    cars: `${base}/cars`,
     details: (id) => {
         return `${base}/cars/${id}`
     }
