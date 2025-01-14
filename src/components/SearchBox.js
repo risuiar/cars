@@ -9,12 +9,12 @@ const colourOptions = [
     { value: 'vanilla', label: 'Vanilla' }
 ];
 
-export default function AnimatedMulti({
+export default function SearchBox({
     title,
     options,
     onChange
 }) {
-AnimatedMulti.propTypes = {
+    SearchBox.propTypes = {
     title: PropTypes.string,
     options: PropTypes.array.isRequired,
     onChange: PropTypes.func
