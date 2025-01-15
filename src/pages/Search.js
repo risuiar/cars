@@ -35,7 +35,15 @@ const Search = () => {
     }, [navigate, page])
 
         return <div className="p-5 max-w-[1093px] mx-auto">
-                <div className="flex flex-wrap">
+                    <div className='text-center max-w-lg m-auto'>
+                        <h1 className='font-bold text-3xl pb-3'>Unsere Fahrzeugauswahl</h1>
+                        <p className='text-sm'>Suchen Sie gezielt nach dem Fahrzeug, das am besten zu Ihren Bedürfnissen passt! Wahlen Sie
+                            einfach Ihre bevorzugte Fahrzeugart und die gewünschte Antriebstechnologie - von klassischen
+                            Verbrennern bis hin zu Elektro- und Hybridmodellen. So finden Sie schnell und unkompliziert lhr
+                            Wunschfahrzeug.
+                        </p>
+                </div>
+                <div className="flex flex-wrap mt-5">
                 <Suspense fallback={<div>Loading...</div>}>
                     <div className='w-full md:w-1/3 md:p-5'>
                         <SearchBox
@@ -55,7 +63,7 @@ const Search = () => {
                         <SearchBox
                             title="Antriebstechnologie"
                             options={searchCriteria ? searchCriteria.trans : []}
-                            onChange={(value) => handleChange(value, 'trans')}
+                            onChange={(value) => console.log(value, 'trans')}
                         />
                     </div>
                 </Suspense>

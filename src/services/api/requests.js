@@ -3,7 +3,7 @@ const base = "https://dash.emilfrey.ch/api/v1/de"
 const requests = {
     criteria: `${base}/search-criteria`,
     cars: `${base}/cars`,
-    details: (id) => {
+    car: (id) => {
         return `${base}/cars/${id}`
     }
 }

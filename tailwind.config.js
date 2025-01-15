@@ -9,6 +9,11 @@ module.exports = {
         accent: '#1d63de',
       }
     },
+    fontFamily: {
+      'sans': ['Inter', 'sans-serif'],
+      'serif': ['Merriweather', 'serif'],
+      'cars': ['Canela-Black', 'Trebuchet MS', 'sans-serif'],
+    },
   },
   plugins: [],
 };
