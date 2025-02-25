@@ -1,29 +1,29 @@
-import PropTypes from 'prop-types';
-import Select from 'react-select';
-import makeAnimated from 'react-select/animated';
+import PropTypes from 'prop-types'
+import Select from 'react-select'
+import makeAnimated from 'react-select/animated'
 
-const animatedComponents = makeAnimated();
+const animatedComponents = makeAnimated()
 
-export default function SearchBox({
-    title,
-    options,
-    onChange
+export default function SearchBox ({
+  title,
+  options,
+  onChange
 }) {
-    SearchBox.propTypes = {
+  SearchBox.propTypes = {
     title: PropTypes.string,
     options: PropTypes.array.isRequired,
     onChange: PropTypes.func
-}
+  }
   return (
     <>
-        <div className='font-bold'>{title}:</div>
-        <Select
-            closeMenuOnSelect={false}
-            components={animatedComponents}
-            isMulti
-            options={options.map(option => ({ value: option.id, label: option.name }))}
-            onChange={onChange}
-        />
+      <div className='font-bold'>{title}:</div>
+      <Select
+        closeMenuOnSelect={false}
+        components={animatedComponents}
+        isMulti
+        options={options.map(option => ({ value: option.id, label: option.name }))}
+        onChange={onChange}
+      />
     </>
-  );
+  )
 }

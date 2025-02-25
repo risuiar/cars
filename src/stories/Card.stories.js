@@ -1,13 +1,13 @@
-import CardCar from '../components/CardCar';
+import CardCar from '../components/CardCar'
 
 export default {
   title: 'Example/CardCar',
   component: CardCar,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
 export const Car = {
   args: {
@@ -19,8 +19,8 @@ export const Car = {
       Km: 100000,
       Price: 15000,
       Images: {
-        M: ['https://vehicle.imgix.net/3298905/d0c96cd5-b5ac-436b-9a2f-f5629fcb00b8_300.jpg'],
-      },
+        M: ['https://vehicle.imgix.net/3298905/d0c96cd5-b5ac-436b-9a2f-f5629fcb00b8_300.jpg']
+      }
     }
-  },
-};
+  }
+}

@@ -7,7 +7,6 @@ import requests from '../services/api/requests'
 import CardCar from './CardCar'
 import CardSkeleton from './CardSkeleton'
 import Pagination from './Pagination'
-import Advertisement from './Advertisement'
 import { numberWithCommas } from '../utils/numbersWithCommas'
 import Modal from './Modal'
 
@@ -51,7 +50,7 @@ const CarsList = ({ selectedSearchCriteria, page }) => {
   }, [selectedSearchCriteria, fetchCars, isSearching])
 
   if (!isSearching) {
-    return <Advertisement />
+    return null
   }
 
   const totalPageCount = cars && Math.ceil(cars.TotalMatches / cars.ItemsPerPage)
@@ -68,7 +67,7 @@ const CarsList = ({ selectedSearchCriteria, page }) => {
               </Link>
             )
           })
-          : <CardSkeleton cards={3} />}
+          : <CardSkeleton cards={6} />}
       </div>
       {totalPageCount > 1 && <Pagination totalPageCount={totalPageCount} currentPage={cars.CurrentPage} />}
     </div>

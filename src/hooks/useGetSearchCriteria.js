@@ -3,15 +3,14 @@ import axios from 'axios'
 import requests from '../services/api/requests'
 
 const useGetSearchCriteria = () => {
-
-const searchCriteria = useMemo(() => {
+  const searchCriteria = useMemo(() => {
     return axios.get(requests.criteria).then(({
-        data,
+      data
     }) => {
-        return data
+      return data
     })
-}, [])
-    return searchCriteria
+  }, [])
+  return searchCriteria
 }
 
 export default useGetSearchCriteria

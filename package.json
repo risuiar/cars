@@ -25,11 +25,7 @@
     "build-storybook": "storybook build"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "plugin:storybook/recommended"
-    ]
+    "extends": "./node_modules/standard/eslintrc.json"
   },
   "browserslist": {
     "production": [
@@ -61,6 +57,7 @@
     "eslint-plugin-storybook": "0.11.2",
     "prettier": "3.4.2",
     "prop-types": "15.8.1",
+    "standard": "17.1.2",
     "storybook": "8.4.7",
     "tailwindcss": "3.4.17",
     "web-vitals": "4.2.4",
